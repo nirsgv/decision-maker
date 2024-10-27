@@ -1,6 +1,7 @@
 import { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
-// import DecisionPage from './components/decisionPage';
+import DecisionPage from './components/decisionPage';
 import DecisionsPage from './components/decisionsPage';
 
 function App() {
@@ -14,7 +15,12 @@ function App() {
 					<div className="text-xl font-bold ">Display options</div>
 				</header>
 				<main className='w-full max-w-[800px]'>
-					<DecisionsPage />
+					<Router>
+						<Routes>
+							<Route path={'/'} element={<DecisionsPage />} />
+							<Route path={'/decision/:id'} element={<DecisionPage />} />
+						</Routes>
+					</Router>
 				</main>
       </div>
       <div className="card">

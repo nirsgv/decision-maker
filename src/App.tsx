@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <div className='flex flex-col items-center w-full'>
-				<header className='flex justify-between w-full p-4 bg-white'>
+				<header className='flex justify-between w-full p-4 text-black bg-white'>
 					<div className="text-xl font-bold ">My Decisions</div>
 					<div className="text-xl font-bold ">Display options</div>
 				</header>
